@@ -25,6 +25,10 @@ public class App {
 			ot.setFechaEntrega("PENDIENTE");
 			ot.setPersonaAtiende("BRENDA");
 			cte.ingresarOrden(ot);
+			System.out.println("SE ingreso correctamente el equipo: "+
+					ot.getEquipoIngreso().getModelo()+" "+
+					ot.getEquipoIngreso().getMarca()+" "+
+					ot.getEquipoIngreso().getNumeroSerie());
 		}else if (args[0].equals("consultarTodo")) {
 			List<Trabajo> lista=cte.consultarOrdenTrabajo();
 			for (Trabajo trabajo : lista) {
